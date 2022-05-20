@@ -1,0 +1,50 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "db:up": "docker-compose up -d && yarn prisma:migrate",
+    "db:down": "docker-compose down --volumes --remove-orphans",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:push": "prisma db push",
+    "prisma:gen": "prisma generate",
+    "prisma:seed": "prisma db seed",
+    "prisma:reset": "prisma migrate reset",
+    "type-check": "tsc",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "1.4.1",
+    "@heroicons/react": "1.0.4",
+    "@prisma/client": "3.2.1",
+    "@tailwindcss/forms": "0.4.0",
+    "@tailwindcss/typography": "0.5.0",
+    "autoprefixer": "10.4.5",
+    "next": "latest",
+    "prisma": "3.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@types/faker": "5.5.9",
+    "@types/node": "^12.12.21",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
+    "faker": "5.5.3",
+    "postcss-preset-env": "^7.6.0",
+    "tailwindcss": "^3.0.24",
+    "ts-node": "8.8.2",
+    "typescript": "4.0"
+  },
+  "prisma": {
+    "seed": "ts-node ./prisma/seed.ts"
+  },
+  "resolutions": {
+    "autoprefixer": "10.4.5"
+  }
+}
