@@ -1,3 +1,4 @@
+import React from 'react';
 import { User } from '@prisma/client';
 import {
   SearchIcon,
